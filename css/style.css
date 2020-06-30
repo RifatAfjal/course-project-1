@@ -2,44 +2,41 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-section {
-    height: 650px;
-}
-
-.top-banner {
-    background-image: url('../images/top-banner.png');
-    background-repeat: no-repeat;
-    padding-top: 40px;
-}
-
 h1 {
-    font-size: 50px;
+    font-size: 35px;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 25px;
 }
 
 p {
     color: dimgray;
 }
 
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.half-width {
+    margin: 0 5%;
+}
+
 .text-highlight {
     color: orange;
 }
 
-.half-width {
-    float: left;
-    width: 40%;
-    margin-left: 5%;
-    padding-left: 2%;
-}
-
 .half-width img{
     width: 100%;
+}
+
+.d-none {
+    display: none;
 }
 
 .btn {
@@ -48,29 +45,40 @@ p {
     padding: 10px 20px;
     border-radius: 10px;
     color: #fff;
+    display: inline-block;
+    margin: 10px 0 20px 0;
 }
 
+/* first section */
+.top-banner {
+    background-image: url('../images/top-banner.png');
+    background-repeat: no-repeat;
+    padding: 50px 0;
+}
+
+/* dream area */
 .dream-area {
     background: url("../images/dream-bg.png");
     background-repeat: no-repeat;
     background-position: right;
-    padding-top: 40px;
+    padding: 50px 0;
 }
 
+/* experience area */
 .experience-area {
-    padding-top: 40px;
+    padding: 50px 0;
     background-color: #a5d5f8;
     background-image: url("../images/exp-bg.png");
     background-repeat: no-repeat;
     background-position: left;
 }
 
-.header-align  {
+.title h2 {
     text-align: center;
     line-height: 0.5rem;
 }
 
-.underline {
+.title div {
     width: 100px;
     height: 5px;
     background-color: orange;
@@ -80,14 +88,15 @@ p {
 .single-experience {
     box-shadow: 10px 10px 40px gray;
     border-radius: 5px;
-    height: 60%;
     background-color: #fff;
+    padding: 10px 20px;
 }
 
 #full-stack {
     border-left: 7px solid;
     border-image: linear-gradient(180deg,lightSalmon,tomato);
     border-image-slice: 1;
+    margin-bottom: 50px;
 }
 
 #baby-web {
@@ -102,4 +111,42 @@ footer p {
     color: black;
     padding: 20px 0;
     margin: 0;
+}
+
+/* responsive design */
+@media screen and (min-width: 950px){
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+     
+    section {
+        height: 500px;
+    }
+
+    .half-width {
+        float: left;
+        width: 40%;
+        margin: 0 0 0 6%;
+    }
+
+    .btn {
+        margin: 10px 0 0 0;
+    }
+    
+    .d-none {
+        display: block;
+    }
+
+    .single-experience {
+        padding: 0 0;
+        height: 350px;
+    }
+
+    #full-stack {
+        margin-bottom: 0;
+    }
 }
